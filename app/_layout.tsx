@@ -1,3 +1,4 @@
+import { theme } from "@/constants/theme";
 import { DarkTheme, ThemeProvider } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
@@ -19,6 +20,26 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="welcome" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="login"
+          options={{
+            headerBackTitle: "Back",
+            headerTitle: "",
+            headerStyle: {
+              backgroundColor: "white",
+            },
+          }}
+        />
+        <Stack.Screen
+          name="signup"
+          options={{
+            headerBackTitle: "Back",
+            headerTitle: "",
+            headerStyle: {
+              backgroundColor: "white",
+            },
+          }}
+        />
       </Stack>
       <StatusBar style="inverted" />
     </ThemeProvider>
